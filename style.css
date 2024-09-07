@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 400;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    padding: 0 8%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(./images/bg.png);
+    background-position: center;
+    background-size: cover;
+}
+
+p {
+    font-size: 14px;
+    color: #fff;
+    line-height: 1.5;
+}
+
+.btn {
+    padding: 12px 28px;
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 30px;
+    cursor: pointer;
+    color: #fff;
+    background-color: #000;
+    border-radius: 20px;
+    border: 1px solid #fff;
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ff0000;
+    transform: scale(1.05);
+}
+
+.navbar {
+    height: 12%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    column-gap: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff0000;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 88%;
+}
+
+.col-left {
+    flex-basis: 40%;
+}
+
+.col-right {
+    flex-basis: 55%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+h1 {
+    color: #fff;
+    font-size: 60px;
+}
+
+.desc {
+    font-size: 16px;
+}
+
+.cards {
+    max-width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    width: 200px;
+    height: 230px;
+    background-size: cover;
+    border-radius: 10px;
+    padding: 15px 25px;
+    cursor: pointer;
+    border: 1px solid red;
+    position: relative;
+    margin: 10px 15px;
+    transition: transform 0.5s ease, border-color 0.5s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-color: #fff;
+}
+
+.card .card-head {
+    background-color: rgba(0, 0, 0, 0.7); 
+    color: #fff;
+    border-radius: 6px;
+    padding: 10px;
+}
+
+.card .card-bottom {
+    position: absolute;
+    bottom: 26px;
+}
+
+.card-1 {
+    background-image: url(./images/pic-1.png);
+}
+
+.card-2 {
+    background-image: url(./images/pic-2.png);
+}
+
+.card-3 {
+    background-image: url(./images/pic-3.png);
+}
+
+.card-4 {
+    background-image: url(./images/pic-4.png);
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    .cards {
+        justify-content: center;
+    }
+
+    .card {
+        width: 180px;
+        height: 210px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .col-left, .col-right {
+        flex-basis: 100%;
+    }
+
+    .cards {
+        justify-content: center;
+    }
+
+    .card {
+        width: 150px;
+        height: 180px;
+    }
+}
